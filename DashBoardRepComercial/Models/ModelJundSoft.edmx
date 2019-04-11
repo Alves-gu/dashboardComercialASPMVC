@@ -1,0 +1,1318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JUNDSOFTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_CD_25">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="CD25_VENDEDOR" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="CD25_VENDEDOR" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CD34_GERENTE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CD25_NOME" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="CD25_COMISSAO" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="CD25_PODE_ATRAV" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CD25_SERA_ATRAV" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CD25_ATIVO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CD25_CGC_CPF" Type="varchar" MaxLength="20" />
+          <Property Name="CD25_INSC_EST" Type="varchar" MaxLength="20" />
+          <Property Name="CD25_INSC_MUN" Type="varchar" MaxLength="20" />
+          <Property Name="CD25_ENDERECO" Type="varchar" MaxLength="50" />
+          <Property Name="CD25_CIDADE" Type="varchar" MaxLength="30" />
+          <Property Name="CD25_BAIRRO" Type="varchar" MaxLength="30" />
+          <Property Name="CD25_CEP" Type="varchar" MaxLength="9" />
+          <Property Name="CD30_UF" Type="char" MaxLength="2" />
+          <Property Name="CD25_TELEFONE" Type="varchar" MaxLength="50" />
+          <Property Name="CD25_EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="CD25_FAX" Type="varchar" MaxLength="50" />
+          <Property Name="CD25_MOBILE_TEM" Type="char" MaxLength="1" />
+          <Property Name="CD25_MOBILE_EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="CD25_MOBILE_SENHA" Type="varchar" MaxLength="10" />
+          <Property Name="CD25_MOBILE_SO" Type="varchar" MaxLength="30" />
+          <Property Name="CD25_RECEBE_DANFE" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_FT_01">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="FT01_NOTA" />
+            <PropertyRef Name="CD14_SIGLA" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="FT01_NOTA" Type="int" Nullable="false" />
+          <Property Name="CD14_SIGLA" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="FT01_TIPO" Type="int" Nullable="false" />
+          <Property Name="FT01_NATUREZA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FT01_FRETE" Type="int" Nullable="false" />
+          <Property Name="FT01_PLACA" Type="varchar" MaxLength="20" />
+          <Property Name="FT01_MARCA_EMBAL" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FT01_QTDE_EMBAL" Type="int" Nullable="false" />
+          <Property Name="FT01_PESO_LIQUIDO" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT01_PESO_BRUTO" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT01_OBS_NF" Type="varchar" MaxLength="500" />
+          <Property Name="FT01_OBS_SUF" Type="varchar" MaxLength="200" />
+          <Property Name="FT01_OBS_ENTREGA" Type="text" />
+          <Property Name="FT01_DATA_EMISSAO" Type="datetime" Nullable="false" />
+          <Property Name="FT01_DATA_DIG" Type="datetime" Nullable="false" />
+          <Property Name="FT01_DATA_EMB" Type="datetime" />
+          <Property Name="FT01_DATA_ENTREGA" Type="datetime" />
+          <Property Name="FT01_MINUTA" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FT01_IMPRESSA" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FT01_CANCELADA" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FT01_HIST_CANC" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_DATA_CANC" Type="datetime" />
+          <Property Name="FT01_COMPET_INI" Type="datetime" />
+          <Property Name="FT01_COMPET_FIM" Type="datetime" />
+          <Property Name="FT01_PED_CLI" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_VLR_PIS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT01_VLR_COFINS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="SY42_USUARIO" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="CD06_CGC_FOR" Type="varchar" MaxLength="20" />
+          <Property Name="CD26_COND_PAG" Type="varchar" MaxLength="30" />
+          <Property Name="CD20_COF" Type="int" Nullable="false" />
+          <Property Name="CD08_CGC_CLI" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CD70_CODIGO" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="CT01_DATA_CONTABIL" Type="datetime" Nullable="false" />
+          <Property Name="CT01_LANCAMENTO" Type="int" />
+          <Property Name="CD25_VENDEDOR" Type="varchar" MaxLength="10" />
+          <Property Name="CD30_UF" Type="char" MaxLength="2" />
+          <Property Name="FT01_NOME_CLIENTE" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_TELEFONE" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_ENDERECO" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_BAIRRO" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_CIDADE" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_CEP" Type="varchar" MaxLength="9" />
+          <Property Name="FT01_DOCUMENTO" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_CHEQUE" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_NUMERO_SEDEX" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_REFERENCIA" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_NFE_CHAVE" Type="varchar" MaxLength="44" />
+          <Property Name="CD42_ORIGEM" Type="varchar" MaxLength="20" />
+          <Property Name="OR01_ORDEM" Type="int" />
+          <Property Name="FT01_NFE_STATUS" Type="int" />
+          <Property Name="FT01_NFE_PROT" Type="varchar" MaxLength="30" />
+          <Property Name="FT01_NFE_PROT_DATA" Type="datetime" />
+          <Property Name="FT01_NFE_PROT_CANC" Type="varchar" MaxLength="30" />
+          <Property Name="FT01_NFE_PROT_CANC_DATA" Type="datetime" />
+          <Property Name="FT01_NFE_MOT_REJEICAO" Type="varchar" MaxLength="500" />
+          <Property Name="FT01_NFE_RECIBO_LOTE" Type="varchar" MaxLength="30" />
+          <Property Name="FT01_NFE_XML_ENVIADO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FT01_NFE_CHAVE_NF_COMP" Type="varchar" MaxLength="44" />
+          <Property Name="SY75_ID" Type="int" />
+          <Property Name="FT01_NOTA_VCHAR" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="FT01_CARTAO_SEDEX" Type="varchar" MaxLength="30" />
+          <Property Name="FT01_DATA_CANHOTO" Type="datetime" />
+          <Property Name="FT01_WMS_BAIXADO" Type="char" MaxLength="1" />
+          <Property Name="FT01_ENT_AG_DATA" Type="datetime" />
+          <Property Name="FT01_ENT_AG_DATA_H" Type="datetime" />
+          <Property Name="FT01_ENT_AG_OBS" Type="varchar" MaxLength="254" />
+          <Property Name="FT01_ENT_AG_DIG" Type="datetime" />
+          <Property Name="FT01_ENT_AG_DIG_H" Type="datetime" />
+          <Property Name="FT01_ENT_AG_USUARIO" Type="varchar" MaxLength="5" />
+          <Property Name="FT01_ENT_SOLIC_RET" Type="datetime" />
+          <Property Name="FT01_ENT_DEVOLUCAO" Type="datetime" />
+          <Property Name="FT01_NFE_DENEGADA" Type="varchar" MaxLength="1" />
+          <Property Name="FT01_ESPECIE_EMBAL" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_NUMERO_EMBAL" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_DATA_BASE" Type="datetime" />
+          <Property Name="PC20_PROCESSO" Type="int" />
+          <Property Name="PC20_ANO" Type="int" />
+          <Property Name="FT01_NFE_PROCESS" Type="varchar" MaxLength="200" />
+          <Property Name="CD08A_ID" Type="int" />
+          <Property Name="FT01_PI_PROT" Type="varchar" MaxLength="50" />
+          <Property Name="FT01_PI_DATA" Type="datetime" />
+          <Property Name="FT01_NF_REMESSA" Type="int" />
+          <Property Name="FT01_NF_REMESSA_SERIE" Type="char" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="T_FT_02">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="FT01_NOTA" />
+            <PropertyRef Name="FT02_ITEM" />
+            <PropertyRef Name="CD14_SIGLA" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="FT01_NOTA" Type="int" Nullable="false" />
+          <Property Name="FT02_ITEM" Type="int" Nullable="false" />
+          <Property Name="CD14_SIGLA" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="FT02_QTDE" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_SALDO_TERC" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_VLR_UN" Type="decimal" Precision="18" Scale="9" Nullable="false" />
+          <Property Name="FT02_ALIQ_IPI" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_ICMS" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_SUBST" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_ISS" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_INSS" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_IR" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_PIS" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_COFINS" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_CSLL" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_VLR_IPI" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_ICMS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_SUBST" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_ACESS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_ISS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_IR" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_INSS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_PIS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_COFINS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_CSLL" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_MERC" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_TOTAL" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_BASE_ICMS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_BASE_SUBST" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_QTDE_BX_EST" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_VLR_BX_EST" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_CUSTO_INFORMADO" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="FT02_CARIMBO" Type="varchar" MaxLength="1000" />
+          <Property Name="FT02_NF_DEV" Type="int" />
+          <Property Name="FT02_NF_DEV_SERIE" Type="varchar" MaxLength="2" />
+          <Property Name="FT02_NF_DEV_ITEM" Type="int" />
+          <Property Name="FT02_ALIQ_PIS_FAT" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_COFINS_FAT" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_VLR_PIS_FAT" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_COFINS_FAT" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="CD10_ALMOX" Type="varchar" MaxLength="10" />
+          <Property Name="CD15_UNIDADE" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="FT02_DESCRICAO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FT02_CST" Type="varchar" MaxLength="5" />
+          <Property Name="CD19_POS_FISCAL" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="PV01_PEDIDO" Type="int" />
+          <Property Name="PV02_ITEM" Type="int" />
+          <Property Name="CD21_INCIDENCIA" Type="varchar" MaxLength="2" />
+          <Property Name="CD20_COF" Type="int" Nullable="false" />
+          <Property Name="CD04_MATERIAL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ES10_LOTE" Type="varchar" MaxLength="20" />
+          <Property Name="FT02_ALIQ_ISS_FAT" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_ISS_FAT" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VPC_PERCENTUAL" Type="decimal" Precision="14" Scale="5" />
+          <Property Name="FT02_VPC_VALOR" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_VPC_BASE" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_DI" Type="varchar" MaxLength="12" />
+          <Property Name="FT02_IMP_DI_DATA" Type="datetime" />
+          <Property Name="FT02_IMP_ADICAO" Type="int" />
+          <Property Name="FT02_IMP_ADICAO_SEQ" Type="int" />
+          <Property Name="FT02_BASE_ICMS_SIMPLES" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_VLR_ICMS_SIMPLES" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_ALIQ_ICMS_SIMPLES" Type="decimal" Precision="13" Scale="3" Nullable="false" />
+          <Property Name="FT02_CSOSN_SIMPLES" Type="varchar" MaxLength="3" />
+          <Property Name="FT02_IMP_VLR_PIS" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_COFINS" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_II" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_SISCOMEX" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_NAO_TRIB" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_ICMS_DIF" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_VLR_ICMS_DIF_PERC" Type="decimal" Precision="9" Scale="7" Nullable="false" />
+          <Property Name="FT02_PED_CLI_IT" Type="int" />
+          <Property Name="FT02_CST_IPI" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="FT02_CST_PIS" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="FT02_CST_COFINS" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="FT02_DESC_ICMS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_DESC_PISCOFINS" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_RED_BASE_ICMS" Type="decimal" Precision="9" Scale="7" Nullable="false" />
+          <Property Name="FT02_RED_BASE_SUBST" Type="decimal" Precision="14" Scale="7" Nullable="false" />
+          <Property Name="FT02_IVA_SUBST" Type="decimal" Precision="10" Scale="7" Nullable="false" />
+          <Property Name="FT02_ALIQ_TRIB_APROXIMADO" Type="decimal" Precision="18" Scale="9" Nullable="false" />
+          <Property Name="FT02_VLR_TRIB_APROXIMADO" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="FT02_EXTRAVIO_QTDE" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="FT02_EXTRAVIO_MOTIVO" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="T_SY_40">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="SY40_GRUPO" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SY40_GRUPO" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SY40_DESCRICAO" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="SY40_TIPO" Type="int" Nullable="false" />
+          <Property Name="CD25_VENDEDOR" Type="varchar" MaxLength="10" />
+          <Property Name="CD55_FABRICANTE" Type="varchar" MaxLength="30" />
+          <Property Name="CD08_CGC_CLI" Type="varchar" MaxLength="20" />
+          <Property Name="CD34_GERENTE" Type="varchar" MaxLength="10" />
+          <Property Name="CD67_DIRETOR" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="T_SY_42">
+          <Key>
+            <PropertyRef Name="SY42_USUARIO" />
+          </Key>
+          <Property Name="SY42_USUARIO" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SY42_NOME" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="SY42_SENHA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="SY42_LIMITE_PC" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="SY42_LIMITE_PV" Type="decimal" Precision="14" Scale="2" />
+          <Property Name="SY42_ATIVO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_MAN_FORNECEDOR" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_MAN_CLIENTE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_MAN_CLIENTE_CREDITO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_MAN_CLIENTE_ENTCOB" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_MAN_CLIENTE_CONTATOS" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_DIGITA_PC" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_DIR_TEXTO" Type="varchar" MaxLength="254" />
+          <Property Name="SY42_MAN_CLIENTE_TABELA" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SY42_EMAIL" Type="varchar" MaxLength="250" />
+          <Property Name="SY42_LIMITE_PV_DESC" Type="decimal" Precision="14" Scale="2" Nullable="false" />
+          <Property Name="SY42_SERVIDOR_SMTP" Type="varchar" MaxLength="50" />
+          <Property Name="SY42_SERVIDOR_USUARIO" Type="varchar" MaxLength="50" />
+          <Property Name="SY42_SERVIDOR_SENHA" Type="varchar" MaxLength="20" />
+          <Property Name="SY42_SERVIDOR_PORTA" Type="int" />
+          <Property Name="SY42_SERVIDOR_SSL" Type="bit" />
+        </EntityType>
+        <EntityType Name="T_SY_43">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="SY42_USUARIO" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SY42_USUARIO" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SY40_GRUPO" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__T_FT_01__54575F1A">
+          <End Role="T_CD_25" Type="Self.T_CD_25" Multiplicity="0..1" />
+          <End Role="T_FT_01" Type="Self.T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_01__7ECCBBD3">
+          <End Role="T_CD_25" Type="Self.T_CD_25" Multiplicity="0..1" />
+          <End Role="T_FT_01" Type="Self.T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_01__SY42_US__00B50445">
+          <End Role="T_SY_42" Type="Self.T_SY_42" Multiplicity="1" />
+          <End Role="T_FT_01" Type="Self.T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_01__SY42_US__563FA78C">
+          <End Role="T_SY_42" Type="Self.T_SY_42" Multiplicity="1" />
+          <End Role="T_FT_01" Type="Self.T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_02__0B3292B8">
+          <End Role="T_FT_01" Type="Self.T_FT_01" Multiplicity="1" />
+          <End Role="T_FT_02" Type="Self.T_FT_02" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Principal>
+            <Dependent Role="T_FT_02">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_02__60BD35FF">
+          <End Role="T_FT_01" Type="Self.T_FT_01" Multiplicity="1" />
+          <End Role="T_FT_02" Type="Self.T_FT_02" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Principal>
+            <Dependent Role="T_FT_02">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_40__53B8409C">
+          <End Role="T_CD_25" Type="Self.T_CD_25" Multiplicity="0..1" />
+          <End Role="T_SY_40" Type="Self.T_SY_40" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_40__72BBEAA9">
+          <End Role="T_CD_25" Type="Self.T_CD_25" Multiplicity="0..1" />
+          <End Role="T_SY_40" Type="Self.T_SY_40" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__587CF5B9">
+          <End Role="T_SY_40" Type="Self.T_SY_40" Multiplicity="1" />
+          <End Role="T_SY_43" Type="Self.T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__77809FC6">
+          <End Role="T_SY_40" Type="Self.T_SY_40" Multiplicity="1" />
+          <End Role="T_SY_43" Type="Self.T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__SY42_US__5A653E2B">
+          <End Role="T_SY_42" Type="Self.T_SY_42" Multiplicity="1" />
+          <End Role="T_SY_43" Type="Self.T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__SY42_US__7968E838">
+          <End Role="T_SY_42" Type="Self.T_SY_42" Multiplicity="1" />
+          <End Role="T_SY_43" Type="Self.T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JUNDSOFTModelStoreContainer">
+          <EntitySet Name="T_CD_25" EntityType="Self.T_CD_25" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_FT_01" EntityType="Self.T_FT_01" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_FT_02" EntityType="Self.T_FT_02" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_SY_40" EntityType="Self.T_SY_40" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_SY_42" EntityType="Self.T_SY_42" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_SY_43" EntityType="Self.T_SY_43" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__T_FT_01__54575F1A" Association="Self.FK__T_FT_01__54575F1A">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_01__7ECCBBD3" Association="Self.FK__T_FT_01__7ECCBBD3">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_01__SY42_US__00B50445" Association="Self.FK__T_FT_01__SY42_US__00B50445">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_01__SY42_US__563FA78C" Association="Self.FK__T_FT_01__SY42_US__563FA78C">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_02__0B3292B8" Association="Self.FK__T_FT_02__0B3292B8">
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+            <End Role="T_FT_02" EntitySet="T_FT_02" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_02__60BD35FF" Association="Self.FK__T_FT_02__60BD35FF">
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+            <End Role="T_FT_02" EntitySet="T_FT_02" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_40__53B8409C" Association="Self.FK__T_SY_40__53B8409C">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_40__72BBEAA9" Association="Self.FK__T_SY_40__72BBEAA9">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__587CF5B9" Association="Self.FK__T_SY_43__587CF5B9">
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__77809FC6" Association="Self.FK__T_SY_43__77809FC6">
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__SY42_US__5A653E2B" Association="Self.FK__T_SY_43__SY42_US__5A653E2B">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__SY42_US__7968E838" Association="Self.FK__T_SY_43__SY42_US__7968E838">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JUNDSOFTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="JUNDSOFTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_CD_25" EntityType="JUNDSOFTModel.T_CD_25" />
+          <EntitySet Name="T_FT_01" EntityType="JUNDSOFTModel.T_FT_01" />
+          <EntitySet Name="T_FT_02" EntityType="JUNDSOFTModel.T_FT_02" />
+          <EntitySet Name="T_SY_40" EntityType="JUNDSOFTModel.T_SY_40" />
+          <EntitySet Name="T_SY_42" EntityType="JUNDSOFTModel.T_SY_42" />
+          <EntitySet Name="T_SY_43" EntityType="JUNDSOFTModel.T_SY_43" />
+          <AssociationSet Name="FK__T_FT_01__54575F1A" Association="JUNDSOFTModel.FK__T_FT_01__54575F1A">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_01__7ECCBBD3" Association="JUNDSOFTModel.FK__T_FT_01__7ECCBBD3">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_40__53B8409C" Association="JUNDSOFTModel.FK__T_SY_40__53B8409C">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_40__72BBEAA9" Association="JUNDSOFTModel.FK__T_SY_40__72BBEAA9">
+            <End Role="T_CD_25" EntitySet="T_CD_25" />
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_01__SY42_US__00B50445" Association="JUNDSOFTModel.FK__T_FT_01__SY42_US__00B50445">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_01__SY42_US__563FA78C" Association="JUNDSOFTModel.FK__T_FT_01__SY42_US__563FA78C">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_02__0B3292B8" Association="JUNDSOFTModel.FK__T_FT_02__0B3292B8">
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+            <End Role="T_FT_02" EntitySet="T_FT_02" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_FT_02__60BD35FF" Association="JUNDSOFTModel.FK__T_FT_02__60BD35FF">
+            <End Role="T_FT_01" EntitySet="T_FT_01" />
+            <End Role="T_FT_02" EntitySet="T_FT_02" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__587CF5B9" Association="JUNDSOFTModel.FK__T_SY_43__587CF5B9">
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__77809FC6" Association="JUNDSOFTModel.FK__T_SY_43__77809FC6">
+            <End Role="T_SY_40" EntitySet="T_SY_40" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__SY42_US__5A653E2B" Association="JUNDSOFTModel.FK__T_SY_43__SY42_US__5A653E2B">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+          <AssociationSet Name="FK__T_SY_43__SY42_US__7968E838" Association="JUNDSOFTModel.FK__T_SY_43__SY42_US__7968E838">
+            <End Role="T_SY_42" EntitySet="T_SY_42" />
+            <End Role="T_SY_43" EntitySet="T_SY_43" />
+          </AssociationSet>
+        </EntityContainer>
+        <ComplexType Name="produtosABC">
+          <Property Type="Int64" Name="SEQ" Nullable="true" />
+          <Property Type="String" Name="cd25_vendedor" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Industrial" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Merc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Produto" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="Qtde_vendida" Nullable="true" Precision="36" Scale="0" />
+          <Property Type="Decimal" Name="Valor_Vendido" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="ABC" Nullable="true" Precision="36" Scale="3" />
+        </ComplexType>
+        <ComplexType Name="Ults_Fats_Vend_Result">
+          <Property Type="Int64" Name="SEQ" Nullable="true" />
+          <Property Type="String" Name="Cliente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UF" Nullable="false" MaxLength="2" />
+          <Property Type="DateTime" Name="Ult_Fat" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="Mes_Cadastro" Nullable="true" />
+          <Property Type="Int32" Name="Ano_Cadastro" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="fatsGerRegional" />
+        <ComplexType Name="Ults_Fats_GerReg" />
+        <EntityType Name="T_CD_25">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="CD25_VENDEDOR" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_VENDEDOR" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CD34_GERENTE" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_NOME" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_COMISSAO" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="CD25_PODE_ATRAV" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CD25_SERA_ATRAV" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CD25_ATIVO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CD25_CGC_CPF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_INSC_EST" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_INSC_MUN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_ENDERECO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_CIDADE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_BAIRRO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="CD30_UF" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CD25_TELEFONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_FAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_MOBILE_TEM" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CD25_MOBILE_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_MOBILE_SENHA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_MOBILE_SO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CD25_RECEBE_DANFE" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="T_FT_01" Relationship="JUNDSOFTModel.FK__T_FT_01__54575F1A" FromRole="T_CD_25" ToRole="T_FT_01" />
+          <NavigationProperty Name="T_FT_011" Relationship="JUNDSOFTModel.FK__T_FT_01__7ECCBBD3" FromRole="T_CD_25" ToRole="T_FT_01" />
+          <NavigationProperty Name="T_SY_40" Relationship="JUNDSOFTModel.FK__T_SY_40__53B8409C" FromRole="T_CD_25" ToRole="T_SY_40" />
+          <NavigationProperty Name="T_SY_401" Relationship="JUNDSOFTModel.FK__T_SY_40__72BBEAA9" FromRole="T_CD_25" ToRole="T_SY_40" />
+        </EntityType>
+        <EntityType Name="T_FT_01">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="FT01_NOTA" />
+            <PropertyRef Name="CD14_SIGLA" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NOTA" Type="Int32" Nullable="false" />
+          <Property Name="CD14_SIGLA" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FT01_TIPO" Type="Int32" Nullable="false" />
+          <Property Name="FT01_NATUREZA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_FRETE" Type="Int32" Nullable="false" />
+          <Property Name="FT01_PLACA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_MARCA_EMBAL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_QTDE_EMBAL" Type="Int32" Nullable="false" />
+          <Property Name="FT01_PESO_LIQUIDO" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT01_PESO_BRUTO" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT01_OBS_NF" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_OBS_SUF" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_OBS_ENTREGA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_DATA_EMISSAO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FT01_DATA_DIG" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FT01_DATA_EMB" Type="DateTime" Precision="3" />
+          <Property Name="FT01_DATA_ENTREGA" Type="DateTime" Precision="3" />
+          <Property Name="FT01_MINUTA" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FT01_IMPRESSA" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FT01_CANCELADA" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FT01_HIST_CANC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_DATA_CANC" Type="DateTime" Precision="3" />
+          <Property Name="FT01_COMPET_INI" Type="DateTime" Precision="3" />
+          <Property Name="FT01_COMPET_FIM" Type="DateTime" Precision="3" />
+          <Property Name="FT01_PED_CLI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_VLR_PIS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT01_VLR_COFINS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="SY42_USUARIO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CD06_CGC_FOR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CD26_COND_PAG" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CD20_COF" Type="Int32" Nullable="false" />
+          <Property Name="CD08_CGC_CLI" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CD70_CODIGO" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CT01_DATA_CONTABIL" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CT01_LANCAMENTO" Type="Int32" />
+          <Property Name="CD25_VENDEDOR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CD30_UF" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FT01_NOME_CLIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_TELEFONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_ENDERECO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_BAIRRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_CIDADE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_DOCUMENTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_CHEQUE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NUMERO_SEDEX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_REFERENCIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NFE_CHAVE" Type="String" MaxLength="44" FixedLength="false" Unicode="false" />
+          <Property Name="CD42_ORIGEM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OR01_ORDEM" Type="Int32" />
+          <Property Name="FT01_NFE_STATUS" Type="Int32" />
+          <Property Name="FT01_NFE_PROT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NFE_PROT_DATA" Type="DateTime" Precision="3" />
+          <Property Name="FT01_NFE_PROT_CANC" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NFE_PROT_CANC_DATA" Type="DateTime" Precision="3" />
+          <Property Name="FT01_NFE_MOT_REJEICAO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NFE_RECIBO_LOTE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NFE_XML_ENVIADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FT01_NFE_CHAVE_NF_COMP" Type="String" MaxLength="44" FixedLength="false" Unicode="false" />
+          <Property Name="SY75_ID" Type="Int32" />
+          <Property Name="FT01_NOTA_VCHAR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_CARTAO_SEDEX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_DATA_CANHOTO" Type="DateTime" Precision="3" />
+          <Property Name="FT01_WMS_BAIXADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FT01_ENT_AG_DATA" Type="DateTime" Precision="3" />
+          <Property Name="FT01_ENT_AG_DATA_H" Type="DateTime" Precision="3" />
+          <Property Name="FT01_ENT_AG_OBS" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_ENT_AG_DIG" Type="DateTime" Precision="3" />
+          <Property Name="FT01_ENT_AG_DIG_H" Type="DateTime" Precision="3" />
+          <Property Name="FT01_ENT_AG_USUARIO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_ENT_SOLIC_RET" Type="DateTime" Precision="3" />
+          <Property Name="FT01_ENT_DEVOLUCAO" Type="DateTime" Precision="3" />
+          <Property Name="FT01_NFE_DENEGADA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_ESPECIE_EMBAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NUMERO_EMBAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_DATA_BASE" Type="DateTime" Precision="3" />
+          <Property Name="PC20_PROCESSO" Type="Int32" />
+          <Property Name="PC20_ANO" Type="Int32" />
+          <Property Name="FT01_NFE_PROCESS" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CD08A_ID" Type="Int32" />
+          <Property Name="FT01_PI_PROT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_PI_DATA" Type="DateTime" Precision="3" />
+          <Property Name="FT01_NF_REMESSA" Type="Int32" />
+          <Property Name="FT01_NF_REMESSA_SERIE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="T_CD_25" Relationship="JUNDSOFTModel.FK__T_FT_01__54575F1A" FromRole="T_FT_01" ToRole="T_CD_25" />
+          <NavigationProperty Name="T_CD_251" Relationship="JUNDSOFTModel.FK__T_FT_01__7ECCBBD3" FromRole="T_FT_01" ToRole="T_CD_25" />
+          <NavigationProperty Name="T_SY_42" Relationship="JUNDSOFTModel.FK__T_FT_01__SY42_US__00B50445" FromRole="T_FT_01" ToRole="T_SY_42" />
+          <NavigationProperty Name="T_SY_421" Relationship="JUNDSOFTModel.FK__T_FT_01__SY42_US__563FA78C" FromRole="T_FT_01" ToRole="T_SY_42" />
+          <NavigationProperty Name="T_FT_02" Relationship="JUNDSOFTModel.FK__T_FT_02__0B3292B8" FromRole="T_FT_01" ToRole="T_FT_02" />
+          <NavigationProperty Name="T_FT_021" Relationship="JUNDSOFTModel.FK__T_FT_02__60BD35FF" FromRole="T_FT_01" ToRole="T_FT_02" />
+        </EntityType>
+        <EntityType Name="T_FT_02">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="FT01_NOTA" />
+            <PropertyRef Name="FT02_ITEM" />
+            <PropertyRef Name="CD14_SIGLA" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FT01_NOTA" Type="Int32" Nullable="false" />
+          <Property Name="FT02_ITEM" Type="Int32" Nullable="false" />
+          <Property Name="CD14_SIGLA" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FT02_QTDE" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_SALDO_TERC" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_VLR_UN" Type="Decimal" Nullable="false" Precision="18" Scale="9" />
+          <Property Name="FT02_ALIQ_IPI" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_ICMS" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_SUBST" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_ISS" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_INSS" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_IR" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_PIS" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_COFINS" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_CSLL" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_VLR_IPI" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_ICMS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_SUBST" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_ACESS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_ISS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_IR" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_INSS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_PIS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_COFINS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_CSLL" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_MERC" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_TOTAL" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_BASE_ICMS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_BASE_SUBST" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_QTDE_BX_EST" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_VLR_BX_EST" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_CUSTO_INFORMADO" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="FT02_CARIMBO" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_NF_DEV" Type="Int32" />
+          <Property Name="FT02_NF_DEV_SERIE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_NF_DEV_ITEM" Type="Int32" />
+          <Property Name="FT02_ALIQ_PIS_FAT" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_COFINS_FAT" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_VLR_PIS_FAT" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_COFINS_FAT" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="CD10_ALMOX" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CD15_UNIDADE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FT02_DESCRICAO" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_CST" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CD19_POS_FISCAL" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="PV01_PEDIDO" Type="Int32" />
+          <Property Name="PV02_ITEM" Type="Int32" />
+          <Property Name="CD21_INCIDENCIA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CD20_COF" Type="Int32" Nullable="false" />
+          <Property Name="CD04_MATERIAL" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ES10_LOTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_ALIQ_ISS_FAT" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_ISS_FAT" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VPC_PERCENTUAL" Type="Decimal" Precision="14" Scale="5" />
+          <Property Name="FT02_VPC_VALOR" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_VPC_BASE" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_DI" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_IMP_DI_DATA" Type="DateTime" Precision="3" />
+          <Property Name="FT02_IMP_ADICAO" Type="Int32" />
+          <Property Name="FT02_IMP_ADICAO_SEQ" Type="Int32" />
+          <Property Name="FT02_BASE_ICMS_SIMPLES" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_VLR_ICMS_SIMPLES" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_ALIQ_ICMS_SIMPLES" Type="Decimal" Nullable="false" Precision="13" Scale="3" />
+          <Property Name="FT02_CSOSN_SIMPLES" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_IMP_VLR_PIS" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_COFINS" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_II" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_SISCOMEX" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_IMP_VLR_NAO_TRIB" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_ICMS_DIF" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_VLR_ICMS_DIF_PERC" Type="Decimal" Nullable="false" Precision="9" Scale="7" />
+          <Property Name="FT02_PED_CLI_IT" Type="Int32" />
+          <Property Name="FT02_CST_IPI" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_CST_PIS" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_CST_COFINS" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FT02_DESC_ICMS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_DESC_PISCOFINS" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_RED_BASE_ICMS" Type="Decimal" Nullable="false" Precision="9" Scale="7" />
+          <Property Name="FT02_RED_BASE_SUBST" Type="Decimal" Nullable="false" Precision="14" Scale="7" />
+          <Property Name="FT02_IVA_SUBST" Type="Decimal" Nullable="false" Precision="10" Scale="7" />
+          <Property Name="FT02_ALIQ_TRIB_APROXIMADO" Type="Decimal" Nullable="false" Precision="18" Scale="9" />
+          <Property Name="FT02_VLR_TRIB_APROXIMADO" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="FT02_EXTRAVIO_QTDE" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="FT02_EXTRAVIO_MOTIVO" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="T_FT_01" Relationship="JUNDSOFTModel.FK__T_FT_02__0B3292B8" FromRole="T_FT_02" ToRole="T_FT_01" />
+          <NavigationProperty Name="T_FT_011" Relationship="JUNDSOFTModel.FK__T_FT_02__60BD35FF" FromRole="T_FT_02" ToRole="T_FT_01" />
+        </EntityType>
+        <EntityType Name="T_SY_40">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="SY40_GRUPO" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="SY40_GRUPO" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SY40_DESCRICAO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SY40_TIPO" Type="Int32" Nullable="false" />
+          <Property Name="CD25_VENDEDOR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CD55_FABRICANTE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CD08_CGC_CLI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CD34_GERENTE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CD67_DIRETOR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="T_CD_25" Relationship="JUNDSOFTModel.FK__T_SY_40__53B8409C" FromRole="T_SY_40" ToRole="T_CD_25" />
+          <NavigationProperty Name="T_CD_251" Relationship="JUNDSOFTModel.FK__T_SY_40__72BBEAA9" FromRole="T_SY_40" ToRole="T_CD_25" />
+          <NavigationProperty Name="T_SY_43" Relationship="JUNDSOFTModel.FK__T_SY_43__587CF5B9" FromRole="T_SY_40" ToRole="T_SY_43" />
+          <NavigationProperty Name="T_SY_431" Relationship="JUNDSOFTModel.FK__T_SY_43__77809FC6" FromRole="T_SY_40" ToRole="T_SY_43" />
+        </EntityType>
+        <EntityType Name="T_SY_42">
+          <Key>
+            <PropertyRef Name="SY42_USUARIO" />
+          </Key>
+          <Property Name="SY42_USUARIO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_NOME" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_SENHA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_LIMITE_PC" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="SY42_LIMITE_PV" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="SY42_ATIVO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_MAN_FORNECEDOR" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_MAN_CLIENTE" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_MAN_CLIENTE_CREDITO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_MAN_CLIENTE_ENTCOB" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_MAN_CLIENTE_CONTATOS" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_DIGITA_PC" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_DIR_TEXTO" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_MAN_CLIENTE_TABELA" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SY42_EMAIL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_LIMITE_PV_DESC" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="SY42_SERVIDOR_SMTP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_SERVIDOR_USUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_SERVIDOR_SENHA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_SERVIDOR_PORTA" Type="Int32" />
+          <Property Name="SY42_SERVIDOR_SSL" Type="Boolean" />
+          <NavigationProperty Name="T_FT_01" Relationship="JUNDSOFTModel.FK__T_FT_01__SY42_US__00B50445" FromRole="T_SY_42" ToRole="T_FT_01" />
+          <NavigationProperty Name="T_FT_011" Relationship="JUNDSOFTModel.FK__T_FT_01__SY42_US__563FA78C" FromRole="T_SY_42" ToRole="T_FT_01" />
+          <NavigationProperty Name="T_SY_43" Relationship="JUNDSOFTModel.FK__T_SY_43__SY42_US__5A653E2B" FromRole="T_SY_42" ToRole="T_SY_43" />
+          <NavigationProperty Name="T_SY_431" Relationship="JUNDSOFTModel.FK__T_SY_43__SY42_US__7968E838" FromRole="T_SY_42" ToRole="T_SY_43" />
+        </EntityType>
+        <EntityType Name="T_SY_43">
+          <Key>
+            <PropertyRef Name="SY01_EMPRESA" />
+            <PropertyRef Name="SY42_USUARIO" />
+          </Key>
+          <Property Name="SY01_EMPRESA" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="SY42_USUARIO" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="SY40_GRUPO" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="T_SY_40" Relationship="JUNDSOFTModel.FK__T_SY_43__587CF5B9" FromRole="T_SY_43" ToRole="T_SY_40" />
+          <NavigationProperty Name="T_SY_401" Relationship="JUNDSOFTModel.FK__T_SY_43__77809FC6" FromRole="T_SY_43" ToRole="T_SY_40" />
+          <NavigationProperty Name="T_SY_42" Relationship="JUNDSOFTModel.FK__T_SY_43__SY42_US__5A653E2B" FromRole="T_SY_43" ToRole="T_SY_42" />
+          <NavigationProperty Name="T_SY_421" Relationship="JUNDSOFTModel.FK__T_SY_43__SY42_US__7968E838" FromRole="T_SY_43" ToRole="T_SY_42" />
+        </EntityType>
+        <Association Name="FK__T_FT_01__54575F1A">
+          <End Type="JUNDSOFTModel.T_CD_25" Role="T_CD_25" Multiplicity="0..1" />
+          <End Type="JUNDSOFTModel.T_FT_01" Role="T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_01__7ECCBBD3">
+          <End Type="JUNDSOFTModel.T_CD_25" Role="T_CD_25" Multiplicity="0..1" />
+          <End Type="JUNDSOFTModel.T_FT_01" Role="T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_40__53B8409C">
+          <End Type="JUNDSOFTModel.T_CD_25" Role="T_CD_25" Multiplicity="0..1" />
+          <End Type="JUNDSOFTModel.T_SY_40" Role="T_SY_40" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_40__72BBEAA9">
+          <End Type="JUNDSOFTModel.T_CD_25" Role="T_CD_25" Multiplicity="0..1" />
+          <End Type="JUNDSOFTModel.T_SY_40" Role="T_SY_40" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CD_25">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Principal>
+            <Dependent Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="CD25_VENDEDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_01__SY42_US__00B50445">
+          <End Type="JUNDSOFTModel.T_SY_42" Role="T_SY_42" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_FT_01" Role="T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_01__SY42_US__563FA78C">
+          <End Type="JUNDSOFTModel.T_SY_42" Role="T_SY_42" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_FT_01" Role="T_FT_01" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_FT_01">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_02__0B3292B8">
+          <End Type="JUNDSOFTModel.T_FT_01" Role="T_FT_01" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_FT_02" Role="T_FT_02" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Principal>
+            <Dependent Role="T_FT_02">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_FT_02__60BD35FF">
+          <End Type="JUNDSOFTModel.T_FT_01" Role="T_FT_01" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_FT_02" Role="T_FT_02" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_FT_01">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Principal>
+            <Dependent Role="T_FT_02">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="FT01_NOTA" />
+              <PropertyRef Name="CD14_SIGLA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__587CF5B9">
+          <End Type="JUNDSOFTModel.T_SY_40" Role="T_SY_40" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_SY_43" Role="T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__77809FC6">
+          <End Type="JUNDSOFTModel.T_SY_40" Role="T_SY_40" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_SY_43" Role="T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_40">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY01_EMPRESA" />
+              <PropertyRef Name="SY40_GRUPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__SY42_US__5A653E2B">
+          <End Type="JUNDSOFTModel.T_SY_42" Role="T_SY_42" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_SY_43" Role="T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__T_SY_43__SY42_US__7968E838">
+          <End Type="JUNDSOFTModel.T_SY_42" Role="T_SY_42" Multiplicity="1" />
+          <End Type="JUNDSOFTModel.T_SY_43" Role="T_SY_43" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SY_42">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Principal>
+            <Dependent Role="T_SY_43">
+              <PropertyRef Name="SY42_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JUNDSOFTModelStoreContainer" CdmEntityContainer="JUNDSOFTEntities">
+          <EntitySetMapping Name="T_CD_25">
+            <EntityTypeMapping TypeName="JUNDSOFTModel.T_CD_25">
+              <MappingFragment StoreEntitySet="T_CD_25">
+                <ScalarProperty Name="CD25_RECEBE_DANFE" ColumnName="CD25_RECEBE_DANFE" />
+                <ScalarProperty Name="CD25_MOBILE_SO" ColumnName="CD25_MOBILE_SO" />
+                <ScalarProperty Name="CD25_MOBILE_SENHA" ColumnName="CD25_MOBILE_SENHA" />
+                <ScalarProperty Name="CD25_MOBILE_EMAIL" ColumnName="CD25_MOBILE_EMAIL" />
+                <ScalarProperty Name="CD25_MOBILE_TEM" ColumnName="CD25_MOBILE_TEM" />
+                <ScalarProperty Name="CD25_FAX" ColumnName="CD25_FAX" />
+                <ScalarProperty Name="CD25_EMAIL" ColumnName="CD25_EMAIL" />
+                <ScalarProperty Name="CD25_TELEFONE" ColumnName="CD25_TELEFONE" />
+                <ScalarProperty Name="CD30_UF" ColumnName="CD30_UF" />
+                <ScalarProperty Name="CD25_CEP" ColumnName="CD25_CEP" />
+                <ScalarProperty Name="CD25_BAIRRO" ColumnName="CD25_BAIRRO" />
+                <ScalarProperty Name="CD25_CIDADE" ColumnName="CD25_CIDADE" />
+                <ScalarProperty Name="CD25_ENDERECO" ColumnName="CD25_ENDERECO" />
+                <ScalarProperty Name="CD25_INSC_MUN" ColumnName="CD25_INSC_MUN" />
+                <ScalarProperty Name="CD25_INSC_EST" ColumnName="CD25_INSC_EST" />
+                <ScalarProperty Name="CD25_CGC_CPF" ColumnName="CD25_CGC_CPF" />
+                <ScalarProperty Name="CD25_ATIVO" ColumnName="CD25_ATIVO" />
+                <ScalarProperty Name="CD25_SERA_ATRAV" ColumnName="CD25_SERA_ATRAV" />
+                <ScalarProperty Name="CD25_PODE_ATRAV" ColumnName="CD25_PODE_ATRAV" />
+                <ScalarProperty Name="CD25_COMISSAO" ColumnName="CD25_COMISSAO" />
+                <ScalarProperty Name="CD25_NOME" ColumnName="CD25_NOME" />
+                <ScalarProperty Name="CD34_GERENTE" ColumnName="CD34_GERENTE" />
+                <ScalarProperty Name="CD25_VENDEDOR" ColumnName="CD25_VENDEDOR" />
+                <ScalarProperty Name="SY01_EMPRESA" ColumnName="SY01_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_FT_01">
+            <EntityTypeMapping TypeName="JUNDSOFTModel.T_FT_01">
+              <MappingFragment StoreEntitySet="T_FT_01">
+                <ScalarProperty Name="FT01_NF_REMESSA_SERIE" ColumnName="FT01_NF_REMESSA_SERIE" />
+                <ScalarProperty Name="FT01_NF_REMESSA" ColumnName="FT01_NF_REMESSA" />
+                <ScalarProperty Name="FT01_PI_DATA" ColumnName="FT01_PI_DATA" />
+                <ScalarProperty Name="FT01_PI_PROT" ColumnName="FT01_PI_PROT" />
+                <ScalarProperty Name="CD08A_ID" ColumnName="CD08A_ID" />
+                <ScalarProperty Name="FT01_NFE_PROCESS" ColumnName="FT01_NFE_PROCESS" />
+                <ScalarProperty Name="PC20_ANO" ColumnName="PC20_ANO" />
+                <ScalarProperty Name="PC20_PROCESSO" ColumnName="PC20_PROCESSO" />
+                <ScalarProperty Name="FT01_DATA_BASE" ColumnName="FT01_DATA_BASE" />
+                <ScalarProperty Name="FT01_NUMERO_EMBAL" ColumnName="FT01_NUMERO_EMBAL" />
+                <ScalarProperty Name="FT01_ESPECIE_EMBAL" ColumnName="FT01_ESPECIE_EMBAL" />
+                <ScalarProperty Name="FT01_NFE_DENEGADA" ColumnName="FT01_NFE_DENEGADA" />
+                <ScalarProperty Name="FT01_ENT_DEVOLUCAO" ColumnName="FT01_ENT_DEVOLUCAO" />
+                <ScalarProperty Name="FT01_ENT_SOLIC_RET" ColumnName="FT01_ENT_SOLIC_RET" />
+                <ScalarProperty Name="FT01_ENT_AG_USUARIO" ColumnName="FT01_ENT_AG_USUARIO" />
+                <ScalarProperty Name="FT01_ENT_AG_DIG_H" ColumnName="FT01_ENT_AG_DIG_H" />
+                <ScalarProperty Name="FT01_ENT_AG_DIG" ColumnName="FT01_ENT_AG_DIG" />
+                <ScalarProperty Name="FT01_ENT_AG_OBS" ColumnName="FT01_ENT_AG_OBS" />
+                <ScalarProperty Name="FT01_ENT_AG_DATA_H" ColumnName="FT01_ENT_AG_DATA_H" />
+                <ScalarProperty Name="FT01_ENT_AG_DATA" ColumnName="FT01_ENT_AG_DATA" />
+                <ScalarProperty Name="FT01_WMS_BAIXADO" ColumnName="FT01_WMS_BAIXADO" />
+                <ScalarProperty Name="FT01_DATA_CANHOTO" ColumnName="FT01_DATA_CANHOTO" />
+                <ScalarProperty Name="FT01_CARTAO_SEDEX" ColumnName="FT01_CARTAO_SEDEX" />
+                <ScalarProperty Name="FT01_NOTA_VCHAR" ColumnName="FT01_NOTA_VCHAR" />
+                <ScalarProperty Name="SY75_ID" ColumnName="SY75_ID" />
+                <ScalarProperty Name="FT01_NFE_CHAVE_NF_COMP" ColumnName="FT01_NFE_CHAVE_NF_COMP" />
+                <ScalarProperty Name="FT01_NFE_XML_ENVIADO" ColumnName="FT01_NFE_XML_ENVIADO" />
+                <ScalarProperty Name="FT01_NFE_RECIBO_LOTE" ColumnName="FT01_NFE_RECIBO_LOTE" />
+                <ScalarProperty Name="FT01_NFE_MOT_REJEICAO" ColumnName="FT01_NFE_MOT_REJEICAO" />
+                <ScalarProperty Name="FT01_NFE_PROT_CANC_DATA" ColumnName="FT01_NFE_PROT_CANC_DATA" />
+                <ScalarProperty Name="FT01_NFE_PROT_CANC" ColumnName="FT01_NFE_PROT_CANC" />
+                <ScalarProperty Name="FT01_NFE_PROT_DATA" ColumnName="FT01_NFE_PROT_DATA" />
+                <ScalarProperty Name="FT01_NFE_PROT" ColumnName="FT01_NFE_PROT" />
+                <ScalarProperty Name="FT01_NFE_STATUS" ColumnName="FT01_NFE_STATUS" />
+                <ScalarProperty Name="OR01_ORDEM" ColumnName="OR01_ORDEM" />
+                <ScalarProperty Name="CD42_ORIGEM" ColumnName="CD42_ORIGEM" />
+                <ScalarProperty Name="FT01_NFE_CHAVE" ColumnName="FT01_NFE_CHAVE" />
+                <ScalarProperty Name="FT01_REFERENCIA" ColumnName="FT01_REFERENCIA" />
+                <ScalarProperty Name="FT01_NUMERO_SEDEX" ColumnName="FT01_NUMERO_SEDEX" />
+                <ScalarProperty Name="FT01_CHEQUE" ColumnName="FT01_CHEQUE" />
+                <ScalarProperty Name="FT01_DOCUMENTO" ColumnName="FT01_DOCUMENTO" />
+                <ScalarProperty Name="FT01_CEP" ColumnName="FT01_CEP" />
+                <ScalarProperty Name="FT01_CIDADE" ColumnName="FT01_CIDADE" />
+                <ScalarProperty Name="FT01_BAIRRO" ColumnName="FT01_BAIRRO" />
+                <ScalarProperty Name="FT01_ENDERECO" ColumnName="FT01_ENDERECO" />
+                <ScalarProperty Name="FT01_TELEFONE" ColumnName="FT01_TELEFONE" />
+                <ScalarProperty Name="FT01_NOME_CLIENTE" ColumnName="FT01_NOME_CLIENTE" />
+                <ScalarProperty Name="CD30_UF" ColumnName="CD30_UF" />
+                <ScalarProperty Name="CD25_VENDEDOR" ColumnName="CD25_VENDEDOR" />
+                <ScalarProperty Name="CT01_LANCAMENTO" ColumnName="CT01_LANCAMENTO" />
+                <ScalarProperty Name="CT01_DATA_CONTABIL" ColumnName="CT01_DATA_CONTABIL" />
+                <ScalarProperty Name="CD70_CODIGO" ColumnName="CD70_CODIGO" />
+                <ScalarProperty Name="CD08_CGC_CLI" ColumnName="CD08_CGC_CLI" />
+                <ScalarProperty Name="CD20_COF" ColumnName="CD20_COF" />
+                <ScalarProperty Name="CD26_COND_PAG" ColumnName="CD26_COND_PAG" />
+                <ScalarProperty Name="CD06_CGC_FOR" ColumnName="CD06_CGC_FOR" />
+                <ScalarProperty Name="SY42_USUARIO" ColumnName="SY42_USUARIO" />
+                <ScalarProperty Name="FT01_VLR_COFINS" ColumnName="FT01_VLR_COFINS" />
+                <ScalarProperty Name="FT01_VLR_PIS" ColumnName="FT01_VLR_PIS" />
+                <ScalarProperty Name="FT01_PED_CLI" ColumnName="FT01_PED_CLI" />
+                <ScalarProperty Name="FT01_COMPET_FIM" ColumnName="FT01_COMPET_FIM" />
+                <ScalarProperty Name="FT01_COMPET_INI" ColumnName="FT01_COMPET_INI" />
+                <ScalarProperty Name="FT01_DATA_CANC" ColumnName="FT01_DATA_CANC" />
+                <ScalarProperty Name="FT01_HIST_CANC" ColumnName="FT01_HIST_CANC" />
+                <ScalarProperty Name="FT01_CANCELADA" ColumnName="FT01_CANCELADA" />
+                <ScalarProperty Name="FT01_IMPRESSA" ColumnName="FT01_IMPRESSA" />
+                <ScalarProperty Name="FT01_MINUTA" ColumnName="FT01_MINUTA" />
+                <ScalarProperty Name="FT01_DATA_ENTREGA" ColumnName="FT01_DATA_ENTREGA" />
+                <ScalarProperty Name="FT01_DATA_EMB" ColumnName="FT01_DATA_EMB" />
+                <ScalarProperty Name="FT01_DATA_DIG" ColumnName="FT01_DATA_DIG" />
+                <ScalarProperty Name="FT01_DATA_EMISSAO" ColumnName="FT01_DATA_EMISSAO" />
+                <ScalarProperty Name="FT01_OBS_ENTREGA" ColumnName="FT01_OBS_ENTREGA" />
+                <ScalarProperty Name="FT01_OBS_SUF" ColumnName="FT01_OBS_SUF" />
+                <ScalarProperty Name="FT01_OBS_NF" ColumnName="FT01_OBS_NF" />
+                <ScalarProperty Name="FT01_PESO_BRUTO" ColumnName="FT01_PESO_BRUTO" />
+                <ScalarProperty Name="FT01_PESO_LIQUIDO" ColumnName="FT01_PESO_LIQUIDO" />
+                <ScalarProperty Name="FT01_QTDE_EMBAL" ColumnName="FT01_QTDE_EMBAL" />
+                <ScalarProperty Name="FT01_MARCA_EMBAL" ColumnName="FT01_MARCA_EMBAL" />
+                <ScalarProperty Name="FT01_PLACA" ColumnName="FT01_PLACA" />
+                <ScalarProperty Name="FT01_FRETE" ColumnName="FT01_FRETE" />
+                <ScalarProperty Name="FT01_NATUREZA" ColumnName="FT01_NATUREZA" />
+                <ScalarProperty Name="FT01_TIPO" ColumnName="FT01_TIPO" />
+                <ScalarProperty Name="CD14_SIGLA" ColumnName="CD14_SIGLA" />
+                <ScalarProperty Name="FT01_NOTA" ColumnName="FT01_NOTA" />
+                <ScalarProperty Name="SY01_EMPRESA" ColumnName="SY01_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_FT_02">
+            <EntityTypeMapping TypeName="JUNDSOFTModel.T_FT_02">
+              <MappingFragment StoreEntitySet="T_FT_02">
+                <ScalarProperty Name="FT02_EXTRAVIO_MOTIVO" ColumnName="FT02_EXTRAVIO_MOTIVO" />
+                <ScalarProperty Name="FT02_EXTRAVIO_QTDE" ColumnName="FT02_EXTRAVIO_QTDE" />
+                <ScalarProperty Name="FT02_VLR_TRIB_APROXIMADO" ColumnName="FT02_VLR_TRIB_APROXIMADO" />
+                <ScalarProperty Name="FT02_ALIQ_TRIB_APROXIMADO" ColumnName="FT02_ALIQ_TRIB_APROXIMADO" />
+                <ScalarProperty Name="FT02_IVA_SUBST" ColumnName="FT02_IVA_SUBST" />
+                <ScalarProperty Name="FT02_RED_BASE_SUBST" ColumnName="FT02_RED_BASE_SUBST" />
+                <ScalarProperty Name="FT02_RED_BASE_ICMS" ColumnName="FT02_RED_BASE_ICMS" />
+                <ScalarProperty Name="FT02_DESC_PISCOFINS" ColumnName="FT02_DESC_PISCOFINS" />
+                <ScalarProperty Name="FT02_DESC_ICMS" ColumnName="FT02_DESC_ICMS" />
+                <ScalarProperty Name="FT02_CST_COFINS" ColumnName="FT02_CST_COFINS" />
+                <ScalarProperty Name="FT02_CST_PIS" ColumnName="FT02_CST_PIS" />
+                <ScalarProperty Name="FT02_CST_IPI" ColumnName="FT02_CST_IPI" />
+                <ScalarProperty Name="FT02_PED_CLI_IT" ColumnName="FT02_PED_CLI_IT" />
+                <ScalarProperty Name="FT02_VLR_ICMS_DIF_PERC" ColumnName="FT02_VLR_ICMS_DIF_PERC" />
+                <ScalarProperty Name="FT02_VLR_ICMS_DIF" ColumnName="FT02_VLR_ICMS_DIF" />
+                <ScalarProperty Name="FT02_IMP_VLR_NAO_TRIB" ColumnName="FT02_IMP_VLR_NAO_TRIB" />
+                <ScalarProperty Name="FT02_IMP_VLR_SISCOMEX" ColumnName="FT02_IMP_VLR_SISCOMEX" />
+                <ScalarProperty Name="FT02_IMP_VLR_II" ColumnName="FT02_IMP_VLR_II" />
+                <ScalarProperty Name="FT02_IMP_VLR_COFINS" ColumnName="FT02_IMP_VLR_COFINS" />
+                <ScalarProperty Name="FT02_IMP_VLR_PIS" ColumnName="FT02_IMP_VLR_PIS" />
+                <ScalarProperty Name="FT02_CSOSN_SIMPLES" ColumnName="FT02_CSOSN_SIMPLES" />
+                <ScalarProperty Name="FT02_ALIQ_ICMS_SIMPLES" ColumnName="FT02_ALIQ_ICMS_SIMPLES" />
+                <ScalarProperty Name="FT02_VLR_ICMS_SIMPLES" ColumnName="FT02_VLR_ICMS_SIMPLES" />
+                <ScalarProperty Name="FT02_BASE_ICMS_SIMPLES" ColumnName="FT02_BASE_ICMS_SIMPLES" />
+                <ScalarProperty Name="FT02_IMP_ADICAO_SEQ" ColumnName="FT02_IMP_ADICAO_SEQ" />
+                <ScalarProperty Name="FT02_IMP_ADICAO" ColumnName="FT02_IMP_ADICAO" />
+                <ScalarProperty Name="FT02_IMP_DI_DATA" ColumnName="FT02_IMP_DI_DATA" />
+                <ScalarProperty Name="FT02_IMP_DI" ColumnName="FT02_IMP_DI" />
+                <ScalarProperty Name="FT02_VPC_BASE" ColumnName="FT02_VPC_BASE" />
+                <ScalarProperty Name="FT02_VPC_VALOR" ColumnName="FT02_VPC_VALOR" />
+                <ScalarProperty Name="FT02_VPC_PERCENTUAL" ColumnName="FT02_VPC_PERCENTUAL" />
+                <ScalarProperty Name="FT02_VLR_ISS_FAT" ColumnName="FT02_VLR_ISS_FAT" />
+                <ScalarProperty Name="FT02_ALIQ_ISS_FAT" ColumnName="FT02_ALIQ_ISS_FAT" />
+                <ScalarProperty Name="ES10_LOTE" ColumnName="ES10_LOTE" />
+                <ScalarProperty Name="CD04_MATERIAL" ColumnName="CD04_MATERIAL" />
+                <ScalarProperty Name="CD20_COF" ColumnName="CD20_COF" />
+                <ScalarProperty Name="CD21_INCIDENCIA" ColumnName="CD21_INCIDENCIA" />
+                <ScalarProperty Name="PV02_ITEM" ColumnName="PV02_ITEM" />
+                <ScalarProperty Name="PV01_PEDIDO" ColumnName="PV01_PEDIDO" />
+                <ScalarProperty Name="CD19_POS_FISCAL" ColumnName="CD19_POS_FISCAL" />
+                <ScalarProperty Name="FT02_CST" ColumnName="FT02_CST" />
+                <ScalarProperty Name="FT02_DESCRICAO" ColumnName="FT02_DESCRICAO" />
+                <ScalarProperty Name="CD15_UNIDADE" ColumnName="CD15_UNIDADE" />
+                <ScalarProperty Name="CD10_ALMOX" ColumnName="CD10_ALMOX" />
+                <ScalarProperty Name="FT02_VLR_COFINS_FAT" ColumnName="FT02_VLR_COFINS_FAT" />
+                <ScalarProperty Name="FT02_VLR_PIS_FAT" ColumnName="FT02_VLR_PIS_FAT" />
+                <ScalarProperty Name="FT02_ALIQ_COFINS_FAT" ColumnName="FT02_ALIQ_COFINS_FAT" />
+                <ScalarProperty Name="FT02_ALIQ_PIS_FAT" ColumnName="FT02_ALIQ_PIS_FAT" />
+                <ScalarProperty Name="FT02_NF_DEV_ITEM" ColumnName="FT02_NF_DEV_ITEM" />
+                <ScalarProperty Name="FT02_NF_DEV_SERIE" ColumnName="FT02_NF_DEV_SERIE" />
+                <ScalarProperty Name="FT02_NF_DEV" ColumnName="FT02_NF_DEV" />
+                <ScalarProperty Name="FT02_CARIMBO" ColumnName="FT02_CARIMBO" />
+                <ScalarProperty Name="FT02_CUSTO_INFORMADO" ColumnName="FT02_CUSTO_INFORMADO" />
+                <ScalarProperty Name="FT02_VLR_BX_EST" ColumnName="FT02_VLR_BX_EST" />
+                <ScalarProperty Name="FT02_QTDE_BX_EST" ColumnName="FT02_QTDE_BX_EST" />
+                <ScalarProperty Name="FT02_BASE_SUBST" ColumnName="FT02_BASE_SUBST" />
+                <ScalarProperty Name="FT02_BASE_ICMS" ColumnName="FT02_BASE_ICMS" />
+                <ScalarProperty Name="FT02_VLR_TOTAL" ColumnName="FT02_VLR_TOTAL" />
+                <ScalarProperty Name="FT02_VLR_MERC" ColumnName="FT02_VLR_MERC" />
+                <ScalarProperty Name="FT02_VLR_CSLL" ColumnName="FT02_VLR_CSLL" />
+                <ScalarProperty Name="FT02_VLR_COFINS" ColumnName="FT02_VLR_COFINS" />
+                <ScalarProperty Name="FT02_VLR_PIS" ColumnName="FT02_VLR_PIS" />
+                <ScalarProperty Name="FT02_VLR_INSS" ColumnName="FT02_VLR_INSS" />
+                <ScalarProperty Name="FT02_VLR_IR" ColumnName="FT02_VLR_IR" />
+                <ScalarProperty Name="FT02_VLR_ISS" ColumnName="FT02_VLR_ISS" />
+                <ScalarProperty Name="FT02_VLR_ACESS" ColumnName="FT02_VLR_ACESS" />
+                <ScalarProperty Name="FT02_VLR_SUBST" ColumnName="FT02_VLR_SUBST" />
+                <ScalarProperty Name="FT02_VLR_ICMS" ColumnName="FT02_VLR_ICMS" />
+                <ScalarProperty Name="FT02_VLR_IPI" ColumnName="FT02_VLR_IPI" />
+                <ScalarProperty Name="FT02_ALIQ_CSLL" ColumnName="FT02_ALIQ_CSLL" />
+                <ScalarProperty Name="FT02_ALIQ_COFINS" ColumnName="FT02_ALIQ_COFINS" />
+                <ScalarProperty Name="FT02_ALIQ_PIS" ColumnName="FT02_ALIQ_PIS" />
+                <ScalarProperty Name="FT02_ALIQ_IR" ColumnName="FT02_ALIQ_IR" />
+                <ScalarProperty Name="FT02_ALIQ_INSS" ColumnName="FT02_ALIQ_INSS" />
+                <ScalarProperty Name="FT02_ALIQ_ISS" ColumnName="FT02_ALIQ_ISS" />
+                <ScalarProperty Name="FT02_ALIQ_SUBST" ColumnName="FT02_ALIQ_SUBST" />
+                <ScalarProperty Name="FT02_ALIQ_ICMS" ColumnName="FT02_ALIQ_ICMS" />
+                <ScalarProperty Name="FT02_ALIQ_IPI" ColumnName="FT02_ALIQ_IPI" />
+                <ScalarProperty Name="FT02_VLR_UN" ColumnName="FT02_VLR_UN" />
+                <ScalarProperty Name="FT02_SALDO_TERC" ColumnName="FT02_SALDO_TERC" />
+                <ScalarProperty Name="FT02_QTDE" ColumnName="FT02_QTDE" />
+                <ScalarProperty Name="CD14_SIGLA" ColumnName="CD14_SIGLA" />
+                <ScalarProperty Name="FT02_ITEM" ColumnName="FT02_ITEM" />
+                <ScalarProperty Name="FT01_NOTA" ColumnName="FT01_NOTA" />
+                <ScalarProperty Name="SY01_EMPRESA" ColumnName="SY01_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SY_40">
+            <EntityTypeMapping TypeName="JUNDSOFTModel.T_SY_40">
+              <MappingFragment StoreEntitySet="T_SY_40">
+                <ScalarProperty Name="CD67_DIRETOR" ColumnName="CD67_DIRETOR" />
+                <ScalarProperty Name="CD34_GERENTE" ColumnName="CD34_GERENTE" />
+                <ScalarProperty Name="CD08_CGC_CLI" ColumnName="CD08_CGC_CLI" />
+                <ScalarProperty Name="CD55_FABRICANTE" ColumnName="CD55_FABRICANTE" />
+                <ScalarProperty Name="CD25_VENDEDOR" ColumnName="CD25_VENDEDOR" />
+                <ScalarProperty Name="SY40_TIPO" ColumnName="SY40_TIPO" />
+                <ScalarProperty Name="SY40_DESCRICAO" ColumnName="SY40_DESCRICAO" />
+                <ScalarProperty Name="SY40_GRUPO" ColumnName="SY40_GRUPO" />
+                <ScalarProperty Name="SY01_EMPRESA" ColumnName="SY01_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SY_42">
+            <EntityTypeMapping TypeName="JUNDSOFTModel.T_SY_42">
+              <MappingFragment StoreEntitySet="T_SY_42">
+                <ScalarProperty Name="SY42_SERVIDOR_SSL" ColumnName="SY42_SERVIDOR_SSL" />
+                <ScalarProperty Name="SY42_SERVIDOR_PORTA" ColumnName="SY42_SERVIDOR_PORTA" />
+                <ScalarProperty Name="SY42_SERVIDOR_SENHA" ColumnName="SY42_SERVIDOR_SENHA" />
+                <ScalarProperty Name="SY42_SERVIDOR_USUARIO" ColumnName="SY42_SERVIDOR_USUARIO" />
+                <ScalarProperty Name="SY42_SERVIDOR_SMTP" ColumnName="SY42_SERVIDOR_SMTP" />
+                <ScalarProperty Name="SY42_LIMITE_PV_DESC" ColumnName="SY42_LIMITE_PV_DESC" />
+                <ScalarProperty Name="SY42_EMAIL" ColumnName="SY42_EMAIL" />
+                <ScalarProperty Name="SY42_MAN_CLIENTE_TABELA" ColumnName="SY42_MAN_CLIENTE_TABELA" />
+                <ScalarProperty Name="SY42_DIR_TEXTO" ColumnName="SY42_DIR_TEXTO" />
+                <ScalarProperty Name="SY42_DIGITA_PC" ColumnName="SY42_DIGITA_PC" />
+                <ScalarProperty Name="SY42_MAN_CLIENTE_CONTATOS" ColumnName="SY42_MAN_CLIENTE_CONTATOS" />
+                <ScalarProperty Name="SY42_MAN_CLIENTE_ENTCOB" ColumnName="SY42_MAN_CLIENTE_ENTCOB" />
+                <ScalarProperty Name="SY42_MAN_CLIENTE_CREDITO" ColumnName="SY42_MAN_CLIENTE_CREDITO" />
+                <ScalarProperty Name="SY42_MAN_CLIENTE" ColumnName="SY42_MAN_CLIENTE" />
+                <ScalarProperty Name="SY42_MAN_FORNECEDOR" ColumnName="SY42_MAN_FORNECEDOR" />
+                <ScalarProperty Name="SY42_ATIVO" ColumnName="SY42_ATIVO" />
+                <ScalarProperty Name="SY42_LIMITE_PV" ColumnName="SY42_LIMITE_PV" />
+                <ScalarProperty Name="SY42_LIMITE_PC" ColumnName="SY42_LIMITE_PC" />
+                <ScalarProperty Name="SY42_SENHA" ColumnName="SY42_SENHA" />
+                <ScalarProperty Name="SY42_NOME" ColumnName="SY42_NOME" />
+                <ScalarProperty Name="SY42_USUARIO" ColumnName="SY42_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SY_43">
+            <EntityTypeMapping TypeName="JUNDSOFTModel.T_SY_43">
+              <MappingFragment StoreEntitySet="T_SY_43">
+                <ScalarProperty Name="SY40_GRUPO" ColumnName="SY40_GRUPO" />
+                <ScalarProperty Name="SY42_USUARIO" ColumnName="SY42_USUARIO" />
+                <ScalarProperty Name="SY01_EMPRESA" ColumnName="SY01_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

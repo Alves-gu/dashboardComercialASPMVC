@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var usuarioLogado = HttpContext.Current.Session;
+    ViewBag.Title = "Nova campanha";
+    @Scripts.Render("~/bundles/jquery");
+    @Scripts.Render("~/bundles/bootstrap");
+    @Scripts.Render("~/bundles/modal");
+    @Styles.Render("~/Content/modal");
+}
+
+<div class="menu">
+    <ul>
+
+        <li>@Html.ActionLink("Painel", "Index", "Dashboard")</li>
+        <li>@Html.ActionLink("Campanhas", "Campanhas", "Dashboard")</li>
+        <li>@Html.ActionLink("Avisos", "Avisos", "Dashboard")</li>
+        @if (usuarioLogado != null)
+        {
+            <li>@Html.ActionLink("Sair", "FinalizarSessao", "Login")</li>
+        }
+    </ul>
+</div>
+<div class="content">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel-heading text-center"><h2>Cadastrar nova campanha</h2></div>
+        @using (Html.BeginForm("CadastrarCampanha", "Campanha", FormMethod.Post, new { enctype = "multipart/form-data", id = "formUploadDados" }))
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="control-label">Nome da campanha:</label>
+                            @Html.Editor("NomeCampanha", new { htmlAttributes = new { @class = "form-control", required = "required", placeholder = "Nome da campanha" } })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="control-label">Mensagem:</label>
+                            @Html.TextArea("MsgCampanha", new { @class = "form-control", required = "required", placeholder = "Sua mensagem...", rows = 7 })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="control-label">Imagem de campanha:</label>
+                            <label class="btn btn-default">
+                                Escolha um arquivo...<input type="file" name="file" required="required" id="fileField" onsubmit="return validarform();" hidden onchange="$('#upload-file-info').html(this.files[0].name)" /> <br />
+                            </label>
+                            <span class='label label-default' id="upload-file-info"></span>
+                            <h6>Tamanho máximo para upload: 4mb</h6><br />
+                            @{
+                                if (ViewBag.Message != null)
+                                {
+                                    <div class="alert alert-success fade in alert-dismissable" style="border-color:#dff0d8;"><a href="" class="close" data-dismiss="alert" aria-label="close" title="close">&times;</a><div class="text-center">@ViewBag.Message</div></div>
+                                }
+                            }
+                            <button type="submit" class="btn btn-default navbar-right" form="formUploadDados" id="myBtn" value="Upload">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="loader"></div>
+        </div>
+    </div>
+</div>

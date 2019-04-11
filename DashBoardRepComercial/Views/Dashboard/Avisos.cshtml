@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DashBoardRepComercial.Models.avisos>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var usuarioLogado = HttpContext.Current.Session;
+    ViewBag.Title = "Avisos";
+}
+
+<div class="menu">
+    <ul>
+                
+        <li>@Html.ActionLink("Painel", "Index", "Dashboard")</li>
+        <li>@Html.ActionLink("Campanhas", "Campanhas", "Dashboard")</li>
+        <li class="active">@Html.ActionLink("Avisos", "Avisos", "Dashboard")</li>
+        @if (usuarioLogado != null)
+        {
+            <li>@Html.ActionLink("Sair", "FinalizarSessao", "Login")</li>
+        }
+    </ul>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Todos os Avisos</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th class="hidden-xs">Data</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var avi in Model)
+                                {
+                                    <tr>
+                                        <td>@avi.NomeAviso</td>
+                                        <td>@avi.DataAviso</td>
+                                        <td><a class="btn btn-info btn-xs" href="../Aviso/Show?IdAviso=@avi.IdAviso">Visualizar</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        @{
+                            if ((string)HttpContext.Current.Session["grupo"] == "Administrador")
+                            {
+                                <button class="btn btn-xs">@Html.ActionLink("Criar novo Aviso", "Create", "Aviso")</button>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

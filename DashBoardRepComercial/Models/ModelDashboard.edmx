@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dashboardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="avisos">
+          <Key>
+            <PropertyRef Name="IdAviso" />
+          </Key>
+          <Property Name="IdAviso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomeAviso" Type="varchar" MaxLength="500" />
+          <Property Name="MsgAviso" Type="varchar" MaxLength="2000" />
+          <Property Name="DataAviso" Type="datetime" />
+        </EntityType>
+        <EntityType Name="campanhas">
+          <Key>
+            <PropertyRef Name="IdCampanha" />
+          </Key>
+          <Property Name="IdCampanha" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomeCampanha" Type="varchar" MaxLength="500" />
+          <Property Name="MsgCampanha" Type="varchar" MaxLength="2000" />
+          <Property Name="ImgCampanha" Type="varbinary(max)" />
+          <Property Name="NomeImgCampanha" Type="varchar" MaxLength="250" />
+          <Property Name="ExtImgCampanha" Type="varchar" MaxLength="35" />
+          <Property Name="DataCampanha" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="dashboardModelStoreContainer">
+          <EntitySet Name="avisos" EntityType="Self.avisos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="campanhas" EntityType="Self.campanhas" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dashboardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="avisos">
+          <Key>
+            <PropertyRef Name="IdAviso" />
+          </Key>
+          <Property Name="IdAviso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomeAviso" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MsgAviso" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DataAviso" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="campanhas">
+          <Key>
+            <PropertyRef Name="IdCampanha" />
+          </Key>
+          <Property Name="IdCampanha" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomeCampanha" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MsgCampanha" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="ImgCampanha" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="NomeImgCampanha" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ExtImgCampanha" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="DataCampanha" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="dashboardEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="avisos" EntityType="Self.avisos" />
+          <EntitySet Name="campanhas" EntityType="Self.campanhas" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dashboardModelStoreContainer" CdmEntityContainer="dashboardEntities">
+          <EntitySetMapping Name="avisos">
+            <EntityTypeMapping TypeName="dashboardModel.avisos">
+              <MappingFragment StoreEntitySet="avisos">
+                <ScalarProperty Name="IdAviso" ColumnName="IdAviso" />
+                <ScalarProperty Name="NomeAviso" ColumnName="NomeAviso" />
+                <ScalarProperty Name="MsgAviso" ColumnName="MsgAviso" />
+                <ScalarProperty Name="DataAviso" ColumnName="DataAviso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="campanhas">
+            <EntityTypeMapping TypeName="dashboardModel.campanhas">
+              <MappingFragment StoreEntitySet="campanhas">
+                <ScalarProperty Name="IdCampanha" ColumnName="IdCampanha" />
+                <ScalarProperty Name="NomeCampanha" ColumnName="NomeCampanha" />
+                <ScalarProperty Name="MsgCampanha" ColumnName="MsgCampanha" />
+                <ScalarProperty Name="ImgCampanha" ColumnName="ImgCampanha" />
+                <ScalarProperty Name="NomeImgCampanha" ColumnName="NomeImgCampanha" />
+                <ScalarProperty Name="ExtImgCampanha" ColumnName="ExtImgCampanha" />
+                <ScalarProperty Name="DataCampanha" ColumnName="DataCampanha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

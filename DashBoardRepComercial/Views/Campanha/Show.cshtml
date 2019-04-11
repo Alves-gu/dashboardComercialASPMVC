@@ -1,0 +1,41 @@
+﻿@model DashBoardRepComercial.Models.campanhas
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var usuarioLogado = HttpContext.Current.Session;
+    ViewBag.Title = "Visualizar Campanha";
+}
+
+
+<div class="menu">
+    <ul>
+                
+        <li>@Html.ActionLink("Painel", "Index", "Dashboard")</li>
+        <li>@Html.ActionLink("Campanhas", "Campanhas", "Dashboard")</li>
+        <li>@Html.ActionLink("Avisos", "Avisos", "Dashboard")</li>
+        @if (usuarioLogado != null)
+        {
+            <li>@Html.ActionLink("Sair", "FinalizarSessao", "Login")</li>
+        }
+    </ul>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-title">
+                        <h3 class="text-center">@Model.NomeCampanha</h3>
+                    </div>
+                    <p style="padding:1.5%">
+                        <strong class="text-primary">Mensagem: </strong>@Model.MsgCampanha
+                    </p>
+                    <p style="padding:1%"><strong class="text-success">Imagem da campanha:</strong></p>
+                    <img class="img-responsive" src="../Campanha/ShowImage?IdCampanha=@Model.IdCampanha" style="max-height:80%;max-width:65%;margin:0 auto;">
+                    <a href="../Dashboard/Campanhas" class="btn btn-link">
+                        Voltar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

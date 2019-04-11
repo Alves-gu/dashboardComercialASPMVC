@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="shortcut icon" href="~/Content/img/cropped-favicon-copy-192x192.png" />
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-left">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">@HttpContext.Current.Session["grupo"]</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <div class="nav navbar-nav navbar-right" style="margin-top:9px;margin-right:0px">
+                    @{
+                        var usuarioLogado = HttpContext.Current.Session["usuario"];
+
+                        if (usuarioLogado != null)
+                        {
+                            <label style="color:white">Bem vindo(a) @usuarioLogado!</label>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/script.js"></script>
+</body>
+
+</html>

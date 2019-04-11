@@ -1,0 +1,60 @@
+﻿@model IEnumerable <DashBoardRepComercial.Models.campanhas>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var usuarioLogado = HttpContext.Current.Session;
+    ViewBag.Title = "Campanhas";
+}
+<div class="menu">
+    <ul>
+                
+        <li>@Html.ActionLink("Painel", "Index", "Dashboard")</li>
+        <li class="active">@Html.ActionLink("Campanhas", "Campanhas", "Dashboard")</li>
+        <li>@Html.ActionLink("Avisos", "Avisos", "Dashboard")</li>
+        @if (usuarioLogado != null)
+        {
+            <li>@Html.ActionLink("Sair", "FinalizarSessao", "Login")</li>
+        }
+    </ul>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Todas as Campanhas</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th class="hidden-xs">Data</th>
+                                    <th class="hidden-xs">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var camps in Model)
+                                {
+                                    <tr>
+                                        <td>@camps.NomeCampanha</td>
+                                        <td>@camps.DataCampanha</td>
+                                        <td class="hidden-xs">
+                                            <a class="btn btn-info btn-xs" href="../Campanha/Show?IdCampanha=@camps.IdCampanha">Visualizar</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        @{
+                            if ((string)HttpContext.Current.Session["grupo"] == "Administrador")
+                            {
+                                <button class="btn btn-xs">@Html.ActionLink("Criar nova Campanha", "Create", "Campanha")</button>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

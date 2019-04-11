@@ -1,0 +1,231 @@
+﻿@using DashBoardRepComercial.Models;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var usuarioLogado = HttpContext.Current.Session;
+    List<campanhas> camps = ViewData["camps"] as List<campanhas>;
+    List<avisos> avi = ViewData["avi"] as List<avisos>;
+    /*List<NvTec_vend_prod_valor_Result> prods = ViewData["prods"] as List<NvTec_vend_prod_valor_Result>;*/
+    ViewBag.Title = "Painel";
+    int i = 1;
+    
+}
+
+
+<div class="menu">
+    <ul>       
+        <li class="active">@Html.ActionLink("Painel", "Index", "Dashboard")</li>
+        <li>@Html.ActionLink("Campanhas", "Campanhas", "Dashboard")</li>
+        <li>@Html.ActionLink("Avisos", "Avisos", "Dashboard")</li>
+        @if (usuarioLogado != null)
+        {
+            <li>@Html.ActionLink("Sair", "FinalizarSessao", "Login")</li>
+        }
+    </ul>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Ultimas Campanhas</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th class="hidden-xs">Data</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var cmp in camps)
+                                {
+                                    <tr>
+                                        <td>
+                                            <a href="/Campanha/Show?IdCampanha=@cmp.IdCampanha">@cmp.NomeCampanha</a>
+                                        </td>
+                                        <td>
+                                            @cmp.DataCampanha
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Ultimos Avisos</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th class="hidden-xs">Data</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var aviso in avi)
+                                {
+                                    <tr>
+                                        <td>
+                                            <a href="/Aviso/Show?IdAviso=@aviso.IdAviso">@aviso.NomeAviso</a>
+                                        </td>
+                                        <td>
+                                            @aviso.DataAviso
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @{
+            if ((string)usuarioLogado["grupo"] == "Representante")
+            {
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center">Minhas metas</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h3 class="text-center">Metas aqui</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pull-right">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center">Meus 10 produtos mais vendidos</h3>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th class="hidden-xs">Produto</th>
+                                            <th>Quantidade vendida</th>
+                                            <th>ABC</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var produto in ViewBag.Produtos)
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+                                            <td>@produto.Produto</td>
+                                            <td>@produto.Qtde_vendida</td>
+                                            <td>@produto.ABC</td>
+                                        </tr>
+                                    i += 1;
+                                }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center">Ultimos faturamentos</h3>
+                            </div>
+                            <div class="panel-body">
+                                <!--<h3 class="text-center">Faturamentos aqui</h3>-->
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Nome do cliente</th>
+                                            <th>UF</th>
+                                            <th class="hidden-xs">Data do último faturamento</th>
+                                            <th>Mês de cadastro</th>
+                                            <!--<th>Valor total</th>-->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                        i = 1;
+                                        }
+                                        @foreach (var faturamento in ViewBag.Faturamentos)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@faturamento.Cliente</td>
+                                                <td>@faturamento.UF</td>
+                                                <td>@String.Format("{0}/{1}/{2}", faturamento.Ult_Fat.Day, faturamento.Ult_Fat.Month, faturamento.Ult_Fat.Year)</td>
+                                                <td>@faturamento.Mes_Cadastro</td>
+                                                <!--<td>@faturamento.Valor</td>-->
+                                            </tr>
+                                            i += 1;
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else if((string)usuarioLogado["grupo"] == "Gerente Regional")
+            {
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center">Minhas metas</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h3 class="text-center">Metas aqui</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title text-center">Ultimos faturamentos</h3>
+                            </div>
+                            <div class="panel-body">
+                                <!--<h3 class="text-center">Faturamentos aqui</h3>-->
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Nome do representante</th>
+                                            <th class="hidden-xs">Data do último faturamento</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                        i = 1;
+                                        }
+                                        @foreach (var faturamento in ViewBag.Faturamentos)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@faturamento.CD25_VENDEDOR</td>
+                                                <td>@String.Format("{0}/{1}/{2}", faturamento.FT01_DATA_EMISSAO.Day, faturamento.FT01_DATA_EMISSAO.Month, faturamento.FT01_DATA_EMISSAO.Year)</td>
+                                            </tr>
+                                            i += 1;
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+     }
+    </div>
+</div>

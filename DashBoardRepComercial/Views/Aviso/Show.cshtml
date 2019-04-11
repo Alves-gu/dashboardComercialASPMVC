@@ -1,0 +1,38 @@
+﻿@model DashBoardRepComercial.Models.avisos
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var usuarioLogado = HttpContext.Current.Session;
+    ViewBag.Title = "Visualizar Campanha";
+}
+<div class="menu">
+    <ul>
+                
+        <li>@Html.ActionLink("Painel", "Index", "Dashboard")</li>
+        <li>@Html.ActionLink("Campanhas", "Campanhas", "Dashboard")</li>
+        <li>@Html.ActionLink("Avisos", "Avisos", "Dashboard")</li>
+        @if (usuarioLogado != null)
+        {
+            <li>@Html.ActionLink("Sair", "FinalizarSessao", "Login")</li>
+        }
+    </ul>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-title">
+                        <h3 class="text-center">@Model.NomeAviso</h3>
+                    </div>
+                    <p style="padding:1.5%">
+                        <strong class="text-primary">Mensagem: </strong>@Model.MsgAviso
+                    </p>
+                    <a href="../Dashboard/Avisos" class="btn btn-link">
+                        Voltar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
